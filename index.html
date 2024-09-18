@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site para Casais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="Brand New Baby Girl - Jeremy Korpas.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <header>
+        <h1>Preparado para surpresa?</h1>
+        <nav>
+            <ul>
+                <li><button class="toggle-button" data-target="sobre-content">Sobre Nós</button></li>
+                <li><button class="toggle-button" data-target="pagamento-content">Pagamento</button></li>
+                <li><button class="toggle-button" data-target="contato-content">Contato</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="flower-container-left" class="flower-container"></div>
+    <div id="flower-container-right" class="flower-container"></div>
+
+    <section class="letter-box">
+        <h2>Escreva sua carta para ela(e):</h2>
+        <form id="letter-form">
+            <label for="remetente">Seu Nome:</label>
+            <input type="text" id="remetente" name="remetente" required>
+            
+            <label for="destinatario">Nome dela(e):</label>
+            <input type="text" id="destinatario" name="destinatario" required>
+            
+            <label for="mensagem">Sua Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            
+            <label for="imagem">Selecionar uma foto: <strong>(Dica)</strong> Capricha no Close! :D</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+            <img id="preview" alt="Pré-visualização da imagem" class="hidden">
+            
+            <button type="button" id="gerar-link">Gerar Link</button>
+            <p id="link-area"></p>
+            <input type="text" id="link-input" class="hidden" readonly>
+            <button id="copy-link" class="hidden">Copiar Link</button>
+        </form>
+    </section>
+
+    <div id="overlay" class="hidden"></div>
+    <div id="modal" class="hidden">
+        <button id="close-modal">Fechar</button>
+        <div id="modal-content"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Site para Casais</p>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
